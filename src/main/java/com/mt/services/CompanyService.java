@@ -12,20 +12,20 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@RequestMapping("/employee")
-public class EmployeeService {
+@RequestMapping("/company")
+public class CompanyService {
 
 	
-	@RequestMapping(value = "/getEmployeeDetails", method = RequestMethod.GET)
+	@RequestMapping(value = "/getCompanyDetails", method = RequestMethod.GET)
 	@ResponseBody
 	String uploadImage(HttpServletRequest request, HttpServletResponse response, HttpSession httpSession)
 			throws JSONException {
 
 		JSONObject js = new JSONObject();
-		js.put("Name", "Mithun Technologies");
-		js.put("Calling Name", "Mithun");
+		js.put("Name", "Accenture");
+		js.put("Calling Name", "employee");
 		js.put("DOB", "08-Nov-2011");
-		js.put("Hobbies", "Reading Technical Blogs,Teaching, Helping to Poor People..");
+		js.put("Hobbies", "Reading Technical Blogs,playing games..");
 		js.put("Places he like", "His native place");
 
 		return js.toString();
